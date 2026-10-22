@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Dónde están mis 13 €?</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:linear-gradient(135deg,#2196f3,#64b5f6);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}
+.card{background:#fff;max-width:800px;width:100%;padding:40px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2);text-align:center}
+h1{color:#1565c0;font-size:3rem;margin-bottom:10px}
+.contador{font-size:4rem;color:#d32f2f;font-weight:bold;margin:20px 0}
+input{padding:12px;width:180px;border:1px solid #ccc;border-radius:8px;text-align:center}
+button{margin-top:15px;padding:12px 24px;background:#1565c0;color:white;border:none;border-radius:8px;cursor:pointer}
+#mensaje{margin-top:20px;color:green;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>🔍 ¿Dónde están mis 13 €?</h1>
+<p>La investigación financiera más importante de nuestro tiempo.</p>
+<div class="contador">13 €</div>
+<p>Tras revisar cuentas, extractos bancarios, bolsillos, chaquetas antiguas y debajo del sofá... los 13 € siguen sin aparecer.</p>
+<hr style="margin:30px 0">
+<h2>💸 Si no los encuentras...</h2>
+<p style="margin:15px 0">Puedes colaborar con la investigación realizando un donativo.</p>
+<input type="number" id="cantidad" placeholder="13">
+<br>
+<button onclick="donar()">Realizar donativo</button>
+<p id="mensaje"></p>
+</div>
+<script>
+function donar(){const cantidad=document.getElementById('cantidad').value;if(!cantidad){alert('Introduce una cantidad');return;}document.getElementById('mensaje').innerHTML='✅ Gracias por tu donativo de '+cantidad+' €. La investigación continuará.';}
+</script>
+</body>
+</html>
